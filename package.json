@@ -1,0 +1,34 @@
+{
+  "name": "term-project",
+  "version": "1.0.0",
+  "description": "Term project for CS280 at UHart. Attempting to find and exploit a buffer overflow through JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briidee3/cs280-term-project.git"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "exploit",
+    "buffer",
+    "overflow",
+    "test",
+    "testing",
+    "project",
+    "school",
+    "cyber",
+    "security",
+    "network",
+    "security"
+  ],
+  "author": "Brianna D'Urso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/briidee3/cs280-term-project/issues"
+  },
+  "homepage": "https://github.com/briidee3/cs280-term-project#readme"
+}
