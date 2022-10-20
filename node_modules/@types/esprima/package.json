@@ -1,0 +1,37 @@
+{
+    "name": "@types/esprima",
+    "version": "4.0.3",
+    "description": "TypeScript definitions for Esprima",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/esprima",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "teppeis",
+            "url": "https://github.com/teppeis",
+            "githubUsername": "teppeis"
+        },
+        {
+            "name": "RReverser",
+            "url": "https://github.com/RReverser",
+            "githubUsername": "RReverser"
+        },
+        {
+            "name": "peter-scott",
+            "url": "https://github.com/peter-scott",
+            "githubUsername": "peter-scott"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/esprima"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/estree": "*"
+    },
+    "typesPublisherContentHash": "f7108e95f7f59c19f40c3f52c4a48c0a431bc6d56fa4f2f8329b7dd434289e95",
+    "typeScriptVersion": "3.6"
+}

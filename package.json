@@ -2,7 +2,7 @@
   "name": "term-project",
   "version": "1.0.0",
   "description": "Term project for CS280 at UHart. Attempting to find and exploit a buffer overflow through JS.",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,5 +30,15 @@
   "bugs": {
     "url": "https://github.com/briidee3/cs280-term-project/issues"
   },
-  "homepage": "https://github.com/briidee3/cs280-term-project#readme"
+  "homepage": "https://github.com/briidee3/cs280-term-project#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglify": "^3.0.2",
+    "jsfuzz": "^1.0.15"
+  }
 }
