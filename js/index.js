@@ -8,6 +8,12 @@
 // attribute in CSS, and the plan is to overflow the browser's
 // buffer with a bunch of elements with fixed positions.
 
+// Apparently, the 'position: fixed;' CSS property
+// holds the element in question in memory in a way
+// not too dissimilar to malloc() in C, which seems to be
+// why it is able to crash the browser.
+// Nice!!
+
 
 // Currently seems to work!!
 // Upon clicking the picture of the egg, the tab crashes!
