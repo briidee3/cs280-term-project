@@ -1,0 +1,2 @@
+# ignore `node_modules` created with `npm i`
+node_modules/
