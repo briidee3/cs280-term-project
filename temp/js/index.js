@@ -9,6 +9,14 @@
 // attribute in CSS, and the plan is to overflow the browser's
 // buffer with a bunch of elements with fixed positions.
 
+// Currently seems to work!!
+// Upon clicking the picture of the egg, the tab crashes!
+// That's a great sign!
+// Prior to clicking the egg, there is no issue.
+// However, clicking the egg starts the script, and crashes the browser!
+// (or, the tab/page, at the very least.)
+// The tab/page becomes entirely unresponsive, even when attempting to refresh the page!
+
 window.onload = function () {
   // payload to overflow the buffer with
   var payloadStyles = "position: fixed;";
