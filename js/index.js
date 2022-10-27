@@ -17,6 +17,7 @@
 // (or, the tab/page, at the very least.)
 // The tab/page becomes entirely unresponsive, even when attempting to refresh the page!
 
+// IT CRASHES CHROME!! NICE!!!
 
 window.onload = () => {
 
