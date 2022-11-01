@@ -11,8 +11,13 @@ let browserChoice = `default`;
 
 // for working with chrome (different syntax than example since development is on Arch Linux, 
 // this is the cmd to start chrome on Arch)
-async function chrome () {
+async function chromeLinux () {
     browserChoice = `google-chrome-stable`;
+}
+
+// for working in chrome on windows
+async function chromeWindows () {
+    browserChoice = `google chrome`;
 }
 
 let validateHTML = () => {
@@ -81,7 +86,8 @@ let serve = () => {
     watch(`js/*.js`, series(validateJS, transpileJSForDev)).on(`change`, reload);
 };
 
-exports.chrome = series(chrome, serve);
+exports.chromeLinux = series(chromeLinux, serve);
+exports.chromeWindows = series(chromeWindows, serve);
 exports.validateHTML = validateHTML;
 exports.validateCSS = validateCSS;
 exports.validateJS = validateJS;
