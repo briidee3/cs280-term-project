@@ -16,3 +16,6 @@ It seems that, by opening a bunch of tabs and running the script, I have
 been able to "crash"/freeze Windows (no blue screen, but entirely unusable, not even a frame every minute) as well as Arch Linux.
 Further experimentation is necessary in order to see if this memory leak
 could potentially be used for a buffer overflow or ACE exploit.
+- Maybe this script/exploit could be used to produce an extremely bloated
+page file on a Windows server (or something of that likeness) in order
+to take up/potentially corrupt memory on the system? Just a thought
