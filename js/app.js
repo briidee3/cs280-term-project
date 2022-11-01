@@ -62,7 +62,7 @@ window.onload = () => {
     };
 
     // for use with openTabs
-    // if it has gray background color (used to identify tabs opened with openTabs),
+    // if it has a certain property (used to identify tabs opened with openTabs),
     // auto run the exploit loop
     let autoRun = () => {
         if (window.innerWidth === 200) {
@@ -72,8 +72,12 @@ window.onload = () => {
 
     // run the "fixedOverflow" function when the egg is clicked
     document.getElementById(`egg`).addEventListener(`click`, () => {
-        fixedOverflow(amount);
+        openTabs(10);   // open more tabs to run the process
+        fixedOverflow(amount);  // "overflow"
         console.log(`mission is a go... hopefully, lol`);
     });
+
+    // if certain conditions are met, automatically run the exploit
+    autoRun();
 
 };
