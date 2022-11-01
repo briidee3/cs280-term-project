@@ -17,7 +17,10 @@ async function chromeLinux () {
 
 // for working in chrome on windows
 async function chromeWindows () {
-    browserChoice = `google chrome`;
+    // args are for utilizing custom memory allocation for the browser
+    // (only placed here for ease of access)
+    // --js-flags="--max_old_space_size=16384"
+    browserChoice = `chrome`;
 }
 
 let validateHTML = () => {

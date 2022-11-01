@@ -10,3 +10,9 @@ which is a really nice thing to think about.
 As of right now, there is a JS function which exploits a CSS property (position: fixed) which stores
 memory of any elements with said property similar to malloc() in C, apparently.
 Further research and work will be necessary to see what happens next, though.
+
+Update 11-1-22 part 2:
+It seems that, by opening a bunch of tabs and running the script, I have
+been able to "crash"/freeze Windows (no blue screen, but entirely unusable, not even a frame every minute) as well as Arch Linux.
+Further experimentation is necessary in order to see if this memory leak
+could potentially be used for a buffer overflow or ACE exploit.
