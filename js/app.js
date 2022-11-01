@@ -43,6 +43,8 @@ window.onload = () => {
     let payload = `<img src="img/stephans-quintet-jwst_large.jpeg" alt="eg" style="${payloadStyles}">`;
 
     // make way too many fixed elements 
+    // not totally sure of an overflow at this point, however that would be ideal
+    // it seems functionally similar, at the very least
     let fixedOverflow = (amt) => {
         for (let i = 0; i < amt; i++) {
             // using setTimeout here so the page doesn't immediately crash
