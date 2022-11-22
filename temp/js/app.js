@@ -19,27 +19,16 @@ window.onload = function () {
 
   // if the PDF text is clicked, execute the exploit
   document.getElementById("danger-pdf").addEventListener("click", function () {
-    //create blob from pdf to auto open it
-    fetch(pdfFileName).then(function (r) {
-      return r.blob();
-    }).then(PDFDownloadLink);
+    PDFDownloadLink();
   });
 
-  // function to create link to download and open PDF
-  var PDFDownloadLink = function PDFDownloadLink(blob) {
-    // set up blob stuff to get proper url once file is downloaded
-    var newBlob = new Blob([blob], {
-      type: "application/pdf"
-    });
-    var data = window.URL.createObjectURL(newBlob);
+  // function to create link to download (and open) PDF
+  var PDFDownloadLink = function /*blob*/
+  PDFDownloadLink() {
     var link = document.createElement("a");
-    link.href = data;
-    //link.download = pdfFileName;
+    link.href = pdfFileName; /*data*/
+    window.open(link.download = pdfFileName);
     link.dispatchEvent(new MouseEvent("click"));
     console.log("downloaded PDF");
-    window.open(data);
-    setTimeout(function () {
-      window.URL.revokeObjectURL(data);
-    }, 100);
   };
 };
