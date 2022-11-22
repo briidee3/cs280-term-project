@@ -9,34 +9,39 @@
 // just for the purposes of showing off the capabilities
 // of certain methods of potential exploitation
 //
+// This was produced and tested using Chrome browser;
+// other functionality may be necessary for compatability with others
+//
 
 window.onload = () => {
 
     let pdfFileName = `test.pdf`;
-    let pdfFileURL = `file:///C:\\Users\\briid\\Downloads\\${pdfFileName}`;
 
     // if the PDF text is clicked, execute the exploit
     document.getElementById(`danger-pdf`).addEventListener(`click`, () => {
         PDFDownloadLink();
-        openPDF(pdfFileName);
+        //openPDF(pdfFileURL);
     });
 
 
 
     // function to create link to download and open PDF
     let PDFDownloadLink = () => {
+        // set up blob stuff to get proper url once file is downloaded
+        var newBlob = new Blob([pdfFileName], {type: `application/pdf`});
+        const data = window.URL.createObjectURL(newBlob);
+
         let link = document.createElement(`a`);
-        link.href = pdfFileName;
+        link.href = data;
         link.download = pdfFileName;
         link.dispatchEvent(new MouseEvent(`click`));
         console.log(`downloaded PDF`);
-    };
 
+        //window.open(data);
 
-    // function to open PDF in browser once downloaded
-    let openPDF = (fileURL) => {
-        window.open(fileURL);
-        console.log(`opened PDF`);
+        setTimeout(function(){
+            window.URL.revokeObjectURL(data);
+        }, 100);
     };
 
 };
