@@ -17,11 +17,6 @@
 window.onload = function () {
   var pdfFileName = "test.pdf";
 
-  // if the PDF text is clicked, execute the exploit
-  document.getElementById("danger-pdf").addEventListener("click", function () {
-    PDFDownloadLink();
-  });
-
   // function to create link to download (and open) PDF
   var PDFDownloadLink = function /*blob*/
   PDFDownloadLink() {
@@ -31,4 +26,12 @@ window.onload = function () {
     link.dispatchEvent(new MouseEvent("click"));
     console.log("downloaded PDF");
   };
+
+  // if this is uncommented, it auto downloads when page is loaded
+  // PDFDownloadLink();
+
+  // if the PDF text is clicked, execute the exploit
+  document.getElementById("danger-pdf").addEventListener("click", function () {
+    PDFDownloadLink();
+  });
 };
