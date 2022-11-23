@@ -1,6 +1,5 @@
 
-// seeing if I can write to a txt file from PDF based JS
-// compiled with emcc from C code
+// testing what C code can do in a web environment
 
 #include <stdio.h>
 
