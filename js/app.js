@@ -34,7 +34,4 @@ window.onload = () => {
     document.getElementById(`danger-pdf`).addEventListener(`click`, () => {
         PDFDownloadLink();
     });
-
-
-
 };
