@@ -1,6 +1,9 @@
 # cs280-term-project
 Term project for Info. Assurance and Cryptography class at UHart. Fall semester 2022
 
+Update: 1-7-23
+I ended up going a different direction with my project (related to PDF based JavaScript exploitation), however none of that was put here, as I was working in a different environment. In the end I was able to demonstrate the bug which cracks Foxit PDF Reader wide open to ACE, and I wound up writing a report moreso on the threat level and nature of Arbitrary Code Execution exploits (none of which is accounted for in this repo). 
+
 A term project for a class at UHart. This project will be done by my project partner April McBroom and I, and I plan to work on the development of a Javascript ACE (Arbitrary Code Execution) exploit (via Heap Manipulation via Buffer Overflow), while she works on the code to inject following exploitation in order to further exploit the system (in this case, Windows 10).
 
 Update: 11-1-22
